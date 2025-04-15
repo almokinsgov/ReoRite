@@ -8,8 +8,8 @@ body {
 }
 
 .logo {
-  width: 25%;
-  margin-top: 2rem;
+    width: 25%;
+    /* margin-top: 2rem; */
 }
 
 h1 {
