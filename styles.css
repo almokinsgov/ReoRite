@@ -56,3 +56,10 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+
+@media (max-width: 600px) {
+  /* Mobile responsiveness */
+    .logo {
+      max-width: 90%;
+    }
+  }
