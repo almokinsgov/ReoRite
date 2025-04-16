@@ -8,7 +8,7 @@ body {
 }
 
 .logo {
-    width: 50%;
+    width: 33%;
     /* margin-top: 2rem; */
 }
 
@@ -69,6 +69,6 @@ footer {
 @media (max-width: 600px) {
   /* Mobile responsiveness */
     .logo {
-      max-width: 90%;
+      width: 90%;
     }
   }
