@@ -51,7 +51,7 @@ input[disabled] {
 .links a {
   display: block;
   margin: 1rem auto;
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: #005fa3;
   text-decoration: none;
 }
