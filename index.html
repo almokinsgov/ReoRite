@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--V1.2.5:tiled:transparentlogo -->
+<!--V2.0.0:dropdown -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,9 +43,114 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5VLTRW9L');</script>
 <!-- End Google Tag Manager -->
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const data = {
+  "Tokerau": {
+    segmented: "To + ke + rau",
+    phonetic: "Tor + keh + roh",
+    phoneticAlt: "Toh + keh + doh (very soft d)",
+    ipa: "torkedau",
+    english: "(to)re + (ke)n + (row)",
+    englishAlt: "(tor)n + (ke)n + (ro)pe",
+    audio: "https://reorite.nz/audio/tokerau.mp3",
+    ssml: "<speak>torkedau</speak>"
+  },
+  "Ohaeawai": {
+    segmented: "O + hae + a + wai",
+    phonetic: "Aw + high + ah + why",
+    phoneticAlt: "or + hi + ah + why",
+    ipa: "ohaeawai",
+    english: "(oh) + (hi) + (ah) + (why)",
+    audio: "https://reorite.nz/audio/ohaeawai.mp3",
+    ssml: "<speak>ohaeawai</speak>"
+  },
+  "Kaikohe": {
+    segmented: "Kai + ko + he",
+    phonetic: "Kigh + kaw + heh",
+    ipa: "kaikohe",
+    english: "(ki)te + (co)re + (he)n",
+    audio: "https://reorite.nz/audio/kaikohe.mp3",
+    ssml: "<speak>kaikohe</speak>"
+  }
+};
+
+  const wordSelect = document.getElementById("wordSelect");
+  const infoBox = document.getElementById("wordInfo");
+
+  wordSelect.addEventListener("change", function () {
+    const value = this.value;
+    if (value && data[value]) {
+      const wordData = data[value];
+      document.getElementById("word").innerText = value;
+document.getElementById("segmented").innerText = wordData.segmented;
+document.getElementById("phonetic").innerText = wordData.phonetic;
+document.getElementById("ipa").innerText = wordData.ipa;
+document.getElementById("english").innerText = wordData.english;
+document.getElementById("ssml").innerText = wordData.ssml;
+
+// Show/hide phoneticAlt
+if (wordData.phoneticAlt) {
+  document.getElementById("phoneticAlt").innerText = wordData.phoneticAlt;
+  document.getElementById("phoneticAltRow").style.display = "block";
+} else {
+  document.getElementById("phoneticAltRow").style.display = "none";
+}
+
+// Show/hide englishAlt
+if (wordData.englishAlt) {
+  document.getElementById("englishAlt").innerText = wordData.englishAlt;
+  document.getElementById("englishAltRow").style.display = "block";
+} else {
+  document.getElementById("englishAltRow").style.display = "none";
+}
+
+      infoBox.style.display = "block";
+      window.currentAudio = wordData.audio;
+    } else {
+      infoBox.style.display = "none";
+    }
+  });
+
+  window.playAudio = function () {
+    if (window.currentAudio) {
+      const audio = new Audio(window.currentAudio);
+      audio.play();
+    }
+  };
+});
+</script>
+
+
+  
 <body>
   <header>
-    <style>body {
+    <style>
+      select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.info-box {
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+      .alt-label {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+}
+
+      
+      body {
   background-image: url('https://reorite.nz/assets/background-tile.png');
   background-repeat: repeat;
   background-size: auto;
@@ -67,10 +172,37 @@ font-size:109%;}
     <p class="standout1">Get started<p>
     <p>Choose a word from the list below to see how the segmentation framework works.</p>
     <section class="search-box">
-      <input type="text" placeholder="Select a Māori word…" disabled />
-      <br><em>(Interactive demo coming soon)</em>
+  <label class="standout1" for="wordSelect">Choose a Māori word to pronounce:</label><br>
+  <select id="wordSelect">
+    <option value="">-- Select a word --</option>
+    <option value="Tokerau">Tokerau</option>
+    <option value="Ohaeawai">Ohaeawai</option>
+    <option value="Kaikohe">Kaikohe</option>
+  </select>
+
+  <div id="wordInfo" class="word-info" style="display:none; margin-top: 1.5rem;">
+    <div class="info-box">
+      <p><strong>Te Reo word:</strong> <span id="word"></span> (IPA: <span id="ipa"></span>)</p>
+      <hr><p><strong>Segmented:</strong> <span id="segmented"></span></p><hr>
+      <p><strong>Phonetic:</strong> <span id="phonetic"></span></p>
+      <p id="phoneticAltRow" style="display: none;"><strong class="alt-label">Phonetic (alt):</strong> <span id="phoneticAlt"></span></p>
       
-      </section>
+      <hr><p><strong>English assist:</strong> <span id="english"></span></p>
+      <p id="englishAltRow" style="display: none;"><strong class="alt-label">English assist (alt):</strong> <span id="englishAlt"></span></p>
+
+      <hr><p>
+        <strong>Play pronunciation:</strong>
+        <button onclick="playAudio()">🔊 Play(coming soon)</button>
+      </p>
+      <p><strong>SSML Output:</strong> <code id="ssml"></code>
+        (<a href="https://github.com/almokinsgov/ReoRite/wiki/SSML-Explainer" target="_blank">What is this?</a>)
+      <hr>
+      <p>Under development, results are subject to change.</p></p>
+      
+    </div>
+  </div>
+</section>
+
     
       </section>
     <p class="standout1">Find out more</p>
