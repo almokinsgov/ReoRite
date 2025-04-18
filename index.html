@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--V2.0.0:dropdown -->
+<!--V2.1.1:dualword -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = {
   "Tokerau": {
     segmented: "To + ke + rau",
-    phonetic: "Tor + keh + roh",
-    phoneticAlt: "Toh + keh + doh (very soft d)",
+    phonetic: "Tor + keh + roh* [Rolled /r/]",
+    phoneticAlt: "Toh + keh + doh (very soft d like order)",
     ipa: "torkedau",
-    english: "(to)re + (ke)n + (row)",
-    englishAlt: "(tor)n + (ke)n + (ro)pe",
+    english: "(to)re + (ke)n + (row)* [Rolled /r/]",
+    englishAlt: "(tor)n + (ke)n + (ro)pe* [Rolled /r/]" ,
     audio: "https://reorite.nz/audio/tokerau.mp3",
     ssml: "<speak>torkedau</speak>"
   },
@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     phonetic: "Aw + high + ah + why",
     phoneticAlt: "or + hi + ah + why",
     ipa: "ohaeawai",
-    english: "(oh) + (hi) + (ah) + (why)",
+    english: "(or) + (hi) + (ah) + (why)",
+    englishAlt: "(o)ar + (hi)gh + (a)rgon + (whi)te",
     audio: "https://reorite.nz/audio/ohaeawai.mp3",
     ssml: "<speak>ohaeawai</speak>"
   },
@@ -82,7 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const value = this.value;
     if (value && data[value]) {
       const wordData = data[value];
-      document.getElementById("word").innerText = value;
+      document.getElementById("wordHeader").innerText = value;
+document.getElementById("wordDetail").innerText = value;
 document.getElementById("segmented").innerText = wordData.segmented;
 document.getElementById("phonetic").innerText = wordData.phonetic;
 document.getElementById("ipa").innerText = wordData.ipa;
@@ -170,9 +172,10 @@ font-size:109%;}
       <br>It uses a phonotactic-aware logic algorithm to help computers and people speak Māori the right way.</p>
     
     <p class="standout1">Get started<p>
-    <p>Choose a word from the list below to see how the segmentation framework works.</p>
-    <section class="search-box">
-  <label class="standout1" for="wordSelect">Choose a Māori word to pronounce:</label><br>
+    <p>Choose a demo word from the list below to see how the segmentation framework breaks words down into easy to pronounce parts.</p>
+    
+      <section class="search-box">
+        <label class="standout2" for="wordSelect"><strong>Choose a Māori word to pronounce:</strong></label><br>
   <select id="wordSelect">
     <option value="">-- Select a demo word --</option>
     <option value="Tokerau">Tokerau</option>
@@ -182,22 +185,26 @@ font-size:109%;}
 
   <div id="wordInfo" class="word-info" style="display:none; margin-top: 1.5rem;">
     <div class="info-box">
-      <p><strong>Te Reo word:</strong> <span id="word"></span> (IPA: <span id="ipa"></span>)</p>
+      <p class="prnncblkhd" style="text-align: center;font-size:larger;"><span class="standout3"><strong>Learn how to pronounce:</strong></span> <span id="wordHeader"></span></p>
+      <hr>
+      <p><strong>Te Reo word:</strong> <span id="wordDetail"></span> <span class="ipahover"><i>(<u>ipa: <span id="ipa"></span></u>)</i></span></p>
       <hr><p><strong>Segmented:</strong> <span id="segmented"></span></p><hr>
       <p><strong>Phonetic:</strong> <span id="phonetic"></span></p>
-      <p id="phoneticAltRow" style="display: none;"><strong class="alt-label">Phonetic (alt):</strong> <span id="phoneticAlt"></span></p>
+      <p id="phoneticAltRow" style="display: none;"><strong class="alt-label2"><i>Phonetic (alt):</i></strong> <span id="phoneticAlt"></span></p>
       
       <hr><p><strong>English assist:</strong> <span id="english"></span></p>
-      <p id="englishAltRow" style="display: none;"><strong class="alt-label">English assist (alt):</strong> <span id="englishAlt"></span></p>
+      <p id="englishAltRow" style="display: none;"><strong class="alt-label2"><i>English assist (alt):</i></strong> <span id="englishAlt"></span></p>
 
       <hr><p>
         <strong>Play pronunciation:</strong>
         <button onclick="playAudio()">🔊 Play(coming soon)</button>
       </p>
-      <p><strong>SSML Output:</strong> <code id="ssml"></code>
+      <hr><p><strong>SSML Output:</strong> <code id="ssml"></code>
         (<a href="https://github.com/almokinsgov/ReoRite/wiki/SSML-Explainer" target="_blank">What is this?</a>)
       <hr>
-      <p>Under development, results are subject to change.</p></p>
+      <i><p>Under development, results are subject to change.</p><p>This word was broken up using the Reo Rite Segmentation Algorithm, learn more about the framework <a href="https://github.com/almokinsgov/ReoRite/wiki/Questions-and-answers#-technical-questions-for-developers-linguists-and-partners">from the Wiki</a></p></i>
+        
+      </p>
       
     </div>
   </div>
