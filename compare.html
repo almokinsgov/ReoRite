@@ -61,6 +61,19 @@
     button:hover {
       background-color: #005fa3;
     }
+    .button2 {
+      margin-right: 1rem;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #238d61;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .button2:hover {
+      background-color: #238d61;
+    }
     .notes {
       margin-top: 1rem;
       padding: 0.5rem;
@@ -85,8 +98,8 @@
 
   <main>
     
-    <div class="container" id="comparisonList"><h2 style="color: #0075c4;">Pronunciation  comparison demo</h2>
-  <p>To demonstrate the real-world impact of the Reo Rite correction framework on Te Reo Māori pronunciation in TTS systems. A selection of common and complex Māori words were tested using AWS Polly. Two versions were recorded one without Reo Rite correction which shows default system pronunciation and another with Reo Rite correction which shows segmentation, IPA tuning, and pronunciation adjustment.</p>
+    <div class="container" id="comparisonList"><h1><span style="color: #0075c4;">Reo </span><span style="color: #238d61;">Rite</span></h1><h2>Pronunciation  comparison demo</h2>
+  <p>To demonstrate the real-world impact of the Reo Rite correction framework on Te Reo Māori pronunciation in TTS systems. A selection of common and complex Māori words were tested using the Amazon text to speech engine Polly with the Molly NZ Nural voice. Two versions were recorded one with the default system pronunciation and another with Reo Rite correction which shows segmentation, IPA tuning, and pronunciation adjustment.</p>
   <p>Each example below allows direct side-by-side listening to highlight the improvements achieved with the Reo Rite system.</p></div>
   </main>
 
@@ -100,9 +113,9 @@
         word: "Tokerau",
         segmented: "To + ke + rau",
         ipa: "/ tɔː.kɛh.ɾ͡dɑ̞ʊ̞ː /",
-        without: "audio/tokerau_without.mp3",
-        with: "audio/tokerau_with.mp3",
-        notes: "Common mispronunciation of 'rau' — softened 'r' correction applied.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        without: "https://reorite.nz/audio/tokerau_without.mp3",
+        with: "https://reorite.nz/audio/tokerau_with.mp3",
+        notes: "Common mispronunciation of 'rau' — softened 'r' correction applied.<br><b>Accuracy rating before correction:</b> 60%<br><b>Accuracy rating after correction:</b> 95%"
       },
       {
         word: "Kahore",
@@ -170,7 +183,7 @@
       },
       {
         word: "Horowhenua",
-        segmented: "Ho + ro + whe + nuhɔː..ɾ͡dɔ̞ː.fɛh.nʊːɑa",
+        segmented: "Ho + ro + whe + nua",
         ipa: "/ hɔː.ɾ͡dɔ̞ː.fɛ.nʊːɑh /",
         without: "audio/horowhenua_without.mp3",
         with: "audio/horowhenua_with.mp3",
@@ -238,7 +251,7 @@
         ${item.notes ? `<div class="notes"><strong>Notes:</strong> ${item.notes}</div>` : ''}
         <div class="button-row">
           <button onclick="playAudio('${item.without}')">🔊 Without Correction</button>
-          <button onclick="playAudio('${item.with}')">🔊 With Reo Rite</button>
+          <button class="button2" onclick="playAudio('${item.with}')">🔊 With Reo Rite</button>
         </div>
         
       `;
