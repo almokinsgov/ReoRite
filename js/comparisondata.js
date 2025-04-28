@@ -5,7 +5,7 @@ const comparisonData = [
         ipa: "/ tɔː.kɛh.ɾ͡dɑ̞ʊ̞ː /",
         without: "https://reorite.nz/audio/tokerau_without.mp3",
         with: "https://reorite.nz/audio/tokerau_with.mp3",
-        notes: "Common mispronunciation of 'rau' — softened 'r' correction applied.<br><b>Accuracy rating before correction:</b> 60%<br><b>Accuracy rating after correction:</b> 95%"
+        notes: "Common mispronunciation of 'rau' — softened 'r' correction applied.<br><b>Accuracy rating before correction:</b> 40%<br><b>Accuracy rating after correction:</b> 95%"
       },
       {
         word: "Kahore",
@@ -13,7 +13,7 @@ const comparisonData = [
         ipa: "/ kɑ.hɔː.ɾ͡dɛ̞h /",
         without: "audio/kahore_without.mp3",
         with: "audio/kahore_with.mp3",
-        notes: "Vowel balance and light 'r' tuning required.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Vowel balance and light 'r' tuning required.<br><b>Accuracy rating before correction:</b> 40%<br><b>Accuracy rating after correction:</b> 95%"
       },
       {
         word: "Tino rangatiratanga",
@@ -21,7 +21,7 @@ const comparisonData = [
         ipa: "/ tiː.nɔː / .ɾ͡dɑ̞.ŋˤŋɑ.tiː.ɾ͡dɑ̞.tɑ.ŋˤŋɑ /",
         without: "audio/tino_without.mp3",
         with: "audio/tino_with.mp3",
-        notes: "Complex r/ng clusters carefully preserved.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Complex r/ng clusters carefully preserved.<br><b>Accuracy rating before correction:</b> 44%<br><b>Accuracy rating after correction:</b> 96%"
       },
       {
         word: "Mātauranga",
