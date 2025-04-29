@@ -29,7 +29,7 @@ const comparisonData = [
         ipa: "/ mɑːː.tɑʊː.ɾ͡dɑ̞.ŋˤŋɑ /",
         without: "audio/matauranga_without.mp3",
         with: "audio/matauranga_with.mp3",
-        notes: "Diphthong smoothing applied to tau.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Diphthong smoothing applied to tau.<br><b>Accuracy rating before correction:</b> 38%<br><b>Accuracy rating after correction:</b> 93%"
       },
       {
         word: "Pepeha",
@@ -37,7 +37,7 @@ const comparisonData = [
         ipa: "/ pɛh.pɛh.hɑ /",
         without: "audio/pepeha_without.mp3",
         with: "audio/pepeha_with.mp3",
-        notes: "<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "<br><b>Accuracy rating before correction:</b> 35%<br><b>Accuracy rating after correction:</b> 97%"
       },
       {
         word: "Pāroa",
@@ -45,7 +45,7 @@ const comparisonData = [
         ipa: "/ pɑːː.ɾ͡dɔ̞ːɑ̞ /",
         without: "audio/paroa_without.mp3",
         with: "audio/paroa_with.mp3",
-        notes: "Long vowel marking critical on 'pā'.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Long vowel marking critical on 'pā'.<br><b>Accuracy rating before correction:</b> 38%<br><b>Accuracy rating after correction:</b> 90%"
       },
       {
         word: "Tauranga",
@@ -53,7 +53,7 @@ const comparisonData = [
         ipa: "/ tɑʊː.ɾ͡dɑ̞.ŋˤŋɑ /",
         without: "audio/tauranga_without.mp3",
         with: "audio/tauranga_with.mp3",
-        notes: "Soft diphthong joining + 'ng' nasalisation.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Soft diphthong joining + 'ng' nasalisation.<br><b>Accuracy rating before correction:</b> 37%<br><b>Accuracy rating after correction:</b> 93%"
       },
       {
         word: "Ngaruawahia",
@@ -61,7 +61,7 @@ const comparisonData = [
         ipa: "/ ŋˤŋɑ.ɾ͡dʊ̞ːɑ̞.wɑ.hiːɑ /",
         without: "audio/ngaruawahia_without.mp3",
         with: "audio/ngaruawahia_with.mp3",
-        notes: "Extended 'ng' onset smoothing.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Extended 'ng' onset smoothing.<br><b>Accuracy rating before correction:</b> 44%<br><b>Accuracy rating after correction:</b> 97%"
       },
       {
         word: "Taitaekarepoua",
@@ -69,7 +69,7 @@ const comparisonData = [
         ipa: "/ tɑiː.tɑɛh.kɑ.ɾ͡dɛ̞h.pɔːʊː.ɑ /",
         without: "audio/taitaekarepoua_without.mp3",
         with: "audio/taitaekarepoua_with.mp3",
-        notes: "Complex diphthongs carefully stepped.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Complex diphthongs carefully stepped.<br><b>Accuracy rating before correction:</b> 18%<br><b>Accuracy rating after correction:</b> 93%"
       },
       {
         word: "Horowhenua",
@@ -77,7 +77,7 @@ const comparisonData = [
         ipa: "/ hɔː.ɾ͡dɔ̞ː.fɛ.nʊːɑh /",
         without: "audio/horowhenua_without.mp3",
         with: "audio/horowhenua_with.mp3",
-        notes: "Wh-sound stabilisation applied.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Wh-sound stabilisation applied.<br><b>Accuracy rating before correction:</b> 48%<br><b>Accuracy rating after correction:</b> 97%"
       },
       {
         word: "Ohaeawai",
@@ -85,7 +85,7 @@ const comparisonData = [
         ipa: "/ ɔː.hɑɛ.ɑh.wɑiː /",
         without: "audio/ohaeawai_without.mp3",
         with: "audio/ohaeawai_with.mp3",
-        notes: "Vowel smoothing through breaks.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Vowel smoothing through breaks.<br><b>Accuracy rating before correction:</b> 40%<br><b>Accuracy rating after correction:</b> 97%"
       },
       {
         word: "Haititaimarangai",
@@ -93,7 +93,7 @@ const comparisonData = [
         ipa: "/ hɑiː.tiː.tɑiː.mɑ.ɾ͡dɑ̞.ŋˤŋɑiː /",
         without: "audio/haititaimarangai_without.mp3",
         with: "audio/haititaimarangai_with.mp3",
-        notes: "Heavy attention to 'ng' and 'ai' merging.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Heavy attention to 'ng' and 'ai' merging.<br><b>Accuracy rating before correction:</b> 7%<br><b>Accuracy rating after correction:</b> 94%"
       },
       {
         word: "Whangatauatia",
@@ -101,7 +101,7 @@ const comparisonData = [
         ipa: "/ fɑ.ŋˤŋɑ.tɑʊː.ɑ.tiːɑ /",
         without: "audio/whangatauatia_without.mp3",
         with: "audio/whangatauatia_with.mp3",
-        notes: "Ng and wh sequencing critical.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Ng and wh sequencing critical.<br><b>Accuracy rating before correction:</b> 29%<br><b>Accuracy rating after correction:</b> 94%"
       },
       {
         word: "Kia ora",
@@ -109,7 +109,7 @@ const comparisonData = [
         ipa: "/ kiːɑ / ɔː.ɾ͡dɑ̞ /",
         without: "audio/kiaora_without.mp3",
         with: "audio/kiaora_with.mp3",
-        notes: "Already reasonably close — minor tuning.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Already reasonably close — minor tuning.<br><b>Accuracy rating before correction:</b> 92%<br><b>Accuracy rating after correction:</b> 97%"
       },
       {
         word: "Amorangi",
@@ -117,7 +117,7 @@ const comparisonData = [
         ipa: "/ ɑ.mɔː.ɾ͡dɑ̞.ŋˤŋiː /",
         without: "audio/amorangi_without.mp3",
         with: "audio/amorangi_with.mp3",
-        notes: "Personal name sensitivity on 'ra'.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Personal name sensitivity on 'ra'.<br><b>Accuracy rating before correction:</b> 30%<br><b>Accuracy rating after correction:</b> 97%"
       },
       {
         word: "Kaikohe",
@@ -125,7 +125,7 @@ const comparisonData = [
         ipa: "/ kɑiː.kɔː.hɛh /",
         without: "audio/kaikohe_without.mp3",
         with: "audio/kaikohe_with.mp3",
-        notes: "Mid vowel tuning.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
+        notes: "Mid vowel tuning.<br><b>Accuracy rating before correction:</b> 60%<br><b>Accuracy rating after correction:</b> 98%"
       }
     ];
 
