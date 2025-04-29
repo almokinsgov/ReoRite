@@ -111,6 +111,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5VLTRW9L');</script>
 <!-- End Google Tag Manager -->
    <script src="https://reorite.nz/js/footer.js"></script> 
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const h1 = document.querySelector("h1");
+  if (h1 && !h1.querySelector("a")) {
+    const link = document.createElement("a");
+    link.href = "https://reorite.nz/";
+    link.style.textDecoration = "none";
+    link.style.color = "inherit"; // optional: keep same text color
+    link.innerHTML = h1.innerHTML;
+    h1.innerHTML = "";
+    h1.appendChild(link);
+  }
+});
+</script>
 <body>
   <header>
     <!--<h1>Reo Rite — Pronunciation Comparison</h1>
