@@ -1,19 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const footerSection = document.createElement("section");
-  footerSection.className = "footer-links";
-  footerSection.innerHTML = `
-    <section class="links" style="text-align:center; padding-top: 1rem;">
-      <a href="https://github.com/almokinsgov/ReoRite/wiki" target="">📄 Check out the Wiki</a><br>
-      <a href="https://reorite.nz/compare" target="">🔊 Hear the difference, check out the comparison page</a><br>
-      🔎 <u>Try the API (coming soon)</u><br>
-      <a href="https://drive.google.com/drive/folders/1eWqhweSHGdlaSAIIxqr0xQ9kK-32VJzN?usp=drive_link" target="_blank">📄 Read the Research Paper</a><br>
-      <a href="https://github.com/almokinsgov/ReoRite" target="_blank">💻 GitHub Repository</a><br>
-      <a href="mailto:amorangim@hotmail.com">📬 Contact</a><br>
-      <img src="https://reorite.nz/assets/logo_tp_bg.png" alt="ReoRite Logo" class="logo" style="margin-top: 1rem;" />
-    </section>
-    <footer>
-      <p>© 2024 Amorangi Mathews – ReoRite.nz</p>
-    </footer>
+  const footer = document.createElement("footer");
+  footer.className = "footer-banner";
+  footer.innerHTML = `
+    <div class="footer-container">
+      <div class="footer-section logo-section">
+        <img src="https://reorite.nz/assets/logo_tp_bg.png" alt="Reo Rite Logo" class="footer-logo" />
+      </div>
+      <div class="footer-section">
+        <h4>Learn More</h4>
+        <ul>
+          <li><a href="https://github.com/almokinsgov/ReoRite/wiki" target="_blank">📄 Wiki</a></li>
+          <li><a href="https://reorite.nz/compare" target="_blank">🔊 Comparison Page</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1eWqhweSHGdlaSAIIxqr0xQ9kK-32VJzN" target="_blank">📄 Research Paper</a></li>
+          <li><a href="https://github.com/almokinsgov/ReoRite" target="_blank">💻 GitHub Repo</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Coming Soon</h4>
+        <ul>
+          <li>🔎 Public API</li>
+          <li>📢 Audio Playback Tools</li>
+          <li>📘 Pronunciation Guide</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:amorangim@hotmail.com">📬 Email Amorangi</a></li>
+          <li><a href="https://reorite.nz" target="_blank">🌐 ReoRite.nz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">© 2024 Amorangi Mathews – ReoRite.nz</div>
   `;
-  document.body.appendChild(footerSection);
+  document.body.appendChild(footer);
 });
