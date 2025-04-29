@@ -71,6 +71,11 @@ footer {
     .logo {
       width: 90%;
     }
+
+  .footer-logo {
+    top: 10%;
+    padding-bottom: 1rem;
+}
   }
 
 /* footer changes */
