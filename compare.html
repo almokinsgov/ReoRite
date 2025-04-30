@@ -103,180 +103,41 @@
 
   gtag('config', 'G-6MHJKT2QHQ');
 </script>  
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5VLTRW9L');</script>
+<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5VLTRW9L');</script>
 <!-- End Google Tag Manager -->
-   <script src="https://reorite.nz/js/footer.js"></script> 
+  
+  <script src="https://reorite.nz/js/footer.js"></script> 
+  
   <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const h1 = document.querySelector("h1");
-  if (h1 && !h1.querySelector("a")) {
-    const link = document.createElement("a");
-    link.href = "https://reorite.nz/";
-    link.style.textDecoration = "none";
-    link.style.color = "inherit"; // optional: keep same text color
-    link.innerHTML = h1.innerHTML;
-    h1.innerHTML = "";
-    h1.appendChild(link);
+    document.addEventListener("DOMContentLoaded", function () {
+      const h1 = document.querySelector("h1");
+      if (h1 && !h1.querySelector("a")) {
+      const link = document.createElement("a");
+      link.href = "https://reorite.nz/";
+      link.style.textDecoration = "none";
+      link.style.color = "inherit"; // optional: keep same text color
+      link.innerHTML = h1.innerHTML;
+      h1.innerHTML = "";
+      h1.appendChild(link);
   }
 });
 </script>
 <body>
   <header>
-    <!--<h1>Reo Rite — Pronunciation Comparison</h1>
-    <h3><i>Before & After Correction (Beta Demo)</i></h3>
-    
-    <section class="intro-block" style="text-align: center; margin-top: 2rem; margin-bottom: 2rem; padding: 1.5rem; background: #fdfdfd; border: 1px solid #ccc; border-radius: 10px; max-width: 70%; margin-left: auto; margin-right: auto;">-->
-  
-<!--</section>-->
-
   </header>
-
-  <main>
-    
-    <div class="container" id="comparisonList"><h1><span style="color: #0075c4;">Reo </span><span style="color: #238d61;">Rite</span></h1><h2>Pronunciation  comparison demo</h2>
-  <p>This page shows how the Reo Rite correction system improves the pronunciation of Te Reo Māori in text-to-speech (TTS) engines. A range of common and complex Māori words were tested using Amazon Polly's Molly NZ Neural voice. Each word was recorded twice: once with the default pronunciation and once with Reo Rite corrections applied (including segmentation, IPA tuning, and pronunciation adjustments).</p><p>On average, the Reo Rite correction improved pronunciation accuracy by more than 50% with most final outputs achieving 95% or higher rating.</p>
-  <p>Listen to the side-by-side recordings below to hear the difference Reo Rite makes.</p></div>
-  </main>
+    <main>
+      <div class="container" id="comparisonList"><h1><span style="color: #0075c4;">Reo </span><span style="color: #238d61;">Rite</span></h1><h2>Pronunciation  comparison demo</h2>
+        <p>This page shows how the Reo Rite correction system improves the pronunciation of Te Reo Māori in text-to-speech (TTS) engines. A range of common and complex Māori words were tested using Amazon Polly's Molly NZ Neural voice. Each word was recorded twice: once with the default pronunciation and once with Reo Rite corrections applied (including segmentation, IPA tuning, and pronunciation adjustments).</p><p>On average, the Reo Rite correction improved pronunciation accuracy by more than 50% with most final outputs achieving 95% or higher rating.</p>
+        <p>Listen to the side-by-side recordings below to hear the difference Reo Rite makes.</p></div>
+    </main>
 
 
 <script src="https://reorite.nz/js/comparisondata.js"></script>
-  <!--<script>
-    const comparisonData = [
-      {
-        word: "Tokerau",
-        segmented: "To + ke + rau",
-        ipa: "/ tɔː.kɛh.ɾ͡dɑ̞ʊ̞ː /",
-        without: "https://reorite.nz/audio/tokerau_without.mp3",
-        with: "https://reorite.nz/audio/tokerau_with.mp3",
-        notes: "Common mispronunciation of 'rau' — softened 'r' correction applied.<br><b>Accuracy rating before correction:</b> 60%<br><b>Accuracy rating after correction:</b> 95%"
-      },
-      {
-        word: "Kahore",
-        segmented: "Ka + ho + re",
-        ipa: "/ kɑ.hɔː.ɾ͡dɛ̞h /",
-        without: "audio/kahore_without.mp3",
-        with: "audio/kahore_with.mp3",
-        notes: "Vowel balance and light 'r' tuning required.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Tino rangatiratanga",
-        segmented: "/ Ti + no / Ra + nga + ti + ra + ta + nga /",
-        ipa: "/ tiː.nɔː / .ɾ͡dɑ̞.ŋˤŋɑ.tiː.ɾ͡dɑ̞.tɑ.ŋˤŋɑ /",
-        without: "audio/tino_without.mp3",
-        with: "audio/tino_with.mp3",
-        notes: "Complex r/ng clusters carefully preserved.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Mātauranga",
-        segmented: "Mā + tau + ra + nga",
-        ipa: "/ mɑːː.tɑʊː.ɾ͡dɑ̞.ŋˤŋɑ /",
-        without: "audio/matauranga_without.mp3",
-        with: "audio/matauranga_with.mp3",
-        notes: "Diphthong smoothing applied to tau.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Pepeha",
-        segmented: "Pe + pe + ha",
-        ipa: "/ pɛh.pɛh.hɑ /",
-        without: "audio/pepeha_without.mp3",
-        with: "audio/pepeha_with.mp3",
-        notes: "<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Pāroa",
-        segmented: "Pā + ro + a",
-        ipa: "/ pɑːː.ɾ͡dɔ̞ːɑ̞ /",
-        without: "audio/paroa_without.mp3",
-        with: "audio/paroa_with.mp3",
-        notes: "Long vowel marking critical on 'pā'.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Tauranga",
-        segmented: "Tau + ra + nga",
-        ipa: "/ tɑʊː.ɾ͡dɑ̞.ŋˤŋɑ /",
-        without: "audio/tauranga_without.mp3",
-        with: "audio/tauranga_with.mp3",
-        notes: "Soft diphthong joining + 'ng' nasalisation.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Ngaruawahia",
-        segmented: "Nga + rua + wa + hia",
-        ipa: "/ ŋˤŋɑ.ɾ͡dʊ̞ːɑ̞.wɑ.hiːɑ /",
-        without: "audio/ngaruawahia_without.mp3",
-        with: "audio/ngaruawahia_with.mp3",
-        notes: "Extended 'ng' onset smoothing.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Taitaekarepoua",
-        segmented: "Tai + tae + ka + re + pou + a",
-        ipa: "/ tɑiː.tɑɛh.kɑ.ɾ͡dɛ̞h.pɔːʊː.ɑ /",
-        without: "audio/taitaekarepoua_without.mp3",
-        with: "audio/taitaekarepoua_with.mp3",
-        notes: "Complex diphthongs carefully stepped.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Horowhenua",
-        segmented: "Ho + ro + whe + nua",
-        ipa: "/ hɔː.ɾ͡dɔ̞ː.fɛ.nʊːɑh /",
-        without: "audio/horowhenua_without.mp3",
-        with: "audio/horowhenua_with.mp3",
-        notes: "Wh-sound stabilisation applied.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Ohaeawai",
-        segmented: "O + hae + a + wai",
-        ipa: "/ ɔː.hɑɛ.ɑh.wɑiː /",
-        without: "audio/ohaeawai_without.mp3",
-        with: "audio/ohaeawai_with.mp3",
-        notes: "Vowel smoothing through breaks.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Haititaimarangai",
-        segmented: "Hai + ti + tai + ma + ra + ngai",
-        ipa: "/ hɑiː.tiː.tɑiː.mɑ.ɾ͡dɑ̞.ŋˤŋɑiː /",
-        without: "audio/haititaimarangai_without.mp3",
-        with: "audio/haititaimarangai_with.mp3",
-        notes: "Heavy attention to 'ng' and 'ai' merging.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Whangatauatia",
-        segmented: "Wha + nga + tau + a + tia",
-        ipa: "/ fɑ.ŋˤŋɑ.tɑʊː.ɑ.tiːɑ /",
-        without: "audio/whangatauatia_without.mp3",
-        with: "audio/whangatauatia_with.mp3",
-        notes: "Ng and wh sequencing critical.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Kia ora",
-        segmented: "/ Kia / o + ra /",
-        ipa: "/ kiːɑ / ɔː.ɾ͡dɑ̞ /",
-        without: "audio/kiaora_without.mp3",
-        with: "audio/kiaora_with.mp3",
-        notes: "Already reasonably close — minor tuning.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Amorangi",
-        segmented: "A + mo + ra + ngi",
-        ipa: "/ ɑ.mɔː.ɾ͡dɑ̞.ŋˤŋiː /",
-        without: "audio/amorangi_without.mp3",
-        with: "audio/amorangi_with.mp3",
-        notes: "Personal name sensitivity on 'ra'.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      },
-      {
-        word: "Kaikohe",
-        segmented: "Kai + ko + he",
-        ipa: "/ kɑiː.kɔː.hɛh /",
-        without: "audio/kaikohe_without.mp3",
-        with: "audio/kaikohe_with.mp3",
-        notes: "Mid vowel tuning.<br><b>Accuracy rating before correction:</b> X%<br><b>Accuracy rating after correction:</b> X%"
-      }
-    ];
-</script>-->
 <script>
     const listContainer = document.getElementById('comparisonList');
 
