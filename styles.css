@@ -148,3 +148,6 @@ html, body {
 main {
   flex: 1; /* Fills the remaining space */
 }
+
+.ipa-line {word-break: break-word;
+}
