@@ -177,7 +177,7 @@ font-size:109%;}
       </section>
       
   <script>
-   const data = {
+    const data = {
       "Tokerau": {
         segmented: "To + ke + <span class='rolledr' title='Rolled R'><i>rau</i></span> <span class='rolledrw'><i>[Rolled /r/]</i></span>",
         phonetic: "Tor + keh + <span class='rolledr' title='Rolled R'><i>roh</i></span> <span class='rolledrw'><i>[Rolled /r/]</i></span>",
@@ -238,15 +238,15 @@ font-size:109%;}
       }
 
       const wordData = data[word];
-      document.getElementById("wordHeader").innerText = word;
-      document.getElementById("wordDetail").innerText = word;
-      document.getElementById("segmented").innerText = wordData.segmented;
-      document.getElementById("phonetic").innerText = wordData.phonetic;
-      document.getElementById("phoneticAlt").innerText = wordData.phoneticAlt || ""; 
-      document.getElementById("ipa").innerText = wordData.ipa;
-      document.getElementById("english").innerText = wordData.english || "";
-      document.getElementById("englishAlt").innerText = wordData.englishAlt || "";
-      document.getElementById("ssml").innerText = wordData.ssml;
+      document.getElementById("wordHeader").innerHTML = word;
+      document.getElementById("wordDetail").innerHTML = word;
+      document.getElementById("segmented").innerHTML = wordData.segmented;
+      document.getElementById("phonetic").innerHTML = wordData.phonetic;
+      document.getElementById("phoneticAlt").innerHTML = wordData.phoneticAlt || ""; 
+      document.getElementById("ipa").innerHTML = wordData.ipa;
+      document.getElementById("english").innerHTML = wordData.english || "";
+      document.getElementById("englishAlt").innerHTML = wordData.englishAlt || "";
+      document.getElementById("ssml").innerHTML = wordData.ssml;
       window.currentAudio = wordData.audio;
 
       info.style.display = "block";
