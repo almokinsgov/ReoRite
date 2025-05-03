@@ -133,7 +133,7 @@ const comparisonData = [
         ipa: "/ tɑʊː.mɑ.tɑ.fɑ.kɑ.tɑ.ŋˤŋiː.hɑ.ŋˤŋɑ.kɔː.ɑʊː.ɑʊː.ɔː.tɑ.mɑ.tɛhɑ.tʊː..ɾ͡di̞ː.pʊː.kɑ.kɑ.piː.kiː.mɑʊː.ŋˤŋɑ.hɔː..ɾ͡dɔ̞ː.nʊː.kʊː.pɔː.kɑiː.fɛh.nʊːɑ.kiː.tɑ.nɑ.tɑ.hʊː/",
         without: "audio/taumata_without.mp3",
         with: "audio/taumata_with.mp3",
-        notes: "Compound word.<br><b>Accuracy rating before correction:</b> 30%<br><b>Accuracy rating after correction:</b> 90%"
+        notes: "Compound word.<br><b>Accuracy rating before correction:</b> 30%<br><b>Accuracy rating after correction:</b> 94%"
       }
     ];
 
