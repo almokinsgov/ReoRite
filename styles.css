@@ -250,3 +250,30 @@ main {
   outline: none;
 }
 
+.rolledr {
+  position: relative;
+  cursor: help;
+}
+
+.rolledr::after {
+  content: "Rolled R";
+  position: absolute;
+  bottom: 125%; /* move above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.rolledr:hover::after {
+  opacity: 1;
+}
+
