@@ -136,7 +136,7 @@ const comparisonData = [
         notes: "Compound word.<br><b>Accuracy rating before correction:</b> 30%<br><b>Accuracy rating after correction:</b> 94%"
       },
       {
-        word: "Month of the year",
+        word: "Māori months of the year",
         segmented: "N/A",
         ipa: "/ N/A /",
         without: "audio/months_without.mp3",
