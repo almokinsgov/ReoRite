@@ -147,8 +147,8 @@ const comparisonData = [
         word: "Phrase capability preview",
         segmented: "N/A",
         ipa: "/ N/A /",
-        without: "audio/tena_without.mp3",
-        with: "audio/tena_with.mp3",
+        without: "audio/Tena_without.mp3",
+        with: "audio/Tena_with.mp3",
         notes: "This phrase-level example previews Reo Rite’s future direction: sentence segmentation and pronunciation support, grounded in natural Māori prosody.<br><b>Accuracy rating before correction:</b> -%<br><b>Accuracy rating after correction:</b> -%"
       }
     ];
