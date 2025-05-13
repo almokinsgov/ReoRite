@@ -142,6 +142,14 @@ const comparisonData = [
         without: "audio/months_without.mp3",
         with: "audio/months_with.mp3",
         notes: "Word combination.<br><b>Accuracy rating before correction:</b> -%<br><b>Accuracy rating after correction:</b> -%"
+      },
+      {
+        word: "Phrase capability preview",
+        segmented: "N/A",
+        ipa: "/ N/A /",
+        without: "audio/tena_without.mp3",
+        with: "audio/tena_with.mp3",
+        notes: "Word combination.<br><b>Accuracy rating before correction:</b> -%<br><b>Accuracy rating after correction:</b> -%"
       }
     ];
 
