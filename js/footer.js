@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <ul>
           <li><a href="mailto:amorangim@hotmail.com">📬 Email Amorangi</a></li>
           <li><a href="https://reorite.nz" target="_self">🌐 ReoRite.nz</a></li>
+          <li><a href="https://forms.gle/8BLGX1gi6eQzUNbW" target="_blank">💬 Share feedback or support Reo Rite</a></li>
+
         </ul>
       </div>
     </div>
