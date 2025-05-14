@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <ul>
           <li><a href="mailto:amorangim@hotmail.com">📬 Email Amorangi</a></li>
           <li><a href="https://reorite.nz" target="_self">🌐 ReoRite.nz</a></li>
-          <li><a href="https://forms.gle/8BLGX1gi6eQzUNbW" target="_blank">💬 Share feedback</a></li>
+          <li><a href="https://forms.gle/8BLGX1gi6eQzUNbW6" target="_blank">💬 Share feedback</a></li>
 
         </ul>
       </div>
