@@ -159,9 +159,18 @@
     });
 
     function playAudio(file) {
-      const audio = new Audio(file);
-      audio.play();
-    }
+  const audio = new Audio(file);
+  audio.play();
+
+  // Google Analytics event tracking
+  const label = file.includes("without") ? "Without Reo Rite" : "With Reo Rite";
+  const word = file.split("/").pop().replace(/_(with|without)\.mp3/, "");
+  
+  gtag('event', 'audio_playback', {
+    event_category: 'Comparison Demo',
+    event_label: `${word} – ${label}`
+  });
+}
   </script>
 
 </body>
