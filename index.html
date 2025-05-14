@@ -232,6 +232,14 @@ font-size:109%;}
 
     select.addEventListener("change", () => {
       const word = select.value;
+
+    // ✅ Track dropdown selection
+    gtag('event', 'word_selected', {
+      event_category: 'Demo Interaction',
+      event_label: word,
+      value: 1
+    });
+      
       if (!word || !data[word]) {
         info.style.display = "none";
         return;
