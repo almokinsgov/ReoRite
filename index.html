@@ -261,10 +261,18 @@ font-size:109%;}
     });
 
     function playAudio() {
-      if (window.currentAudio) {
-        new Audio(window.currentAudio).play();
-      }
-    }
+  if (window.currentAudio) {
+    new Audio(window.currentAudio).play();
+
+    // Google Analytics event tracking
+    const selectedWord = document.getElementById("wordHeader").innerText;
+    gtag('event', 'audio_play', {
+      event_category: 'Demo Interaction',
+      event_label: selectedWord,
+      value: 1
+    });
+  }
+}
   </script>  
 </body>
                                                                                    </html>
