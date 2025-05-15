@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--V2.2.2:tokeraufix:dualword:footer -->
+<!--V3.0.0:tokeraufix:dualword:footer:limitations:show button:alt hide -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -112,6 +112,29 @@ document.addEventListener("DOMContentLoaded", function () {
     .standout1 {color:#0075c4;
 font-weight:bold;
 font-size:109%;}
+      
+      .hidden {
+  display: none;
+}
+
+.toggle-btn {
+  font-size: 0.85rem;
+  color: #0075c4bf;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.alt-block {
+  display: contents; /* keeps grid structure intact */
+}
+.hidden-block {
+  display: none;
+}
+
+
     </style>
     <h1><span style="color: #0075c4;">Reo</span> <span style="color: #238d61;">Rite</span></h1>
     / r-eh-aw / ree + teh /
@@ -131,9 +154,9 @@ font-size:109%;}
     <select id="wordSelect">
       <option value="">-- Select a demo word --</option>
       <option value="Tokerau">Tokerau</option>
-      <option value="Ohaeawai">Ohaeawai</option>
+      <option value="Ōhaeawai">Ōhaeawai</option>
       <option value="Kaikohe">Kaikohe</option>
-      <option value="Ngaruawahia">Ngaruawahia</option>
+      <option value="Ngaruawahia">Ngaruawahia</option> 
       <option value="Horowhenua">Horowhenua</option>
     </select>
   </div>
@@ -151,14 +174,24 @@ font-size:109%;}
       <div class="label">Phonetic:</div>
       <div class="value" id="phonetic"></div>
 
-      <div class="label">Phonetic (alt):</div>
-      <div class="value" id="phoneticAlt"></div>
+      <div class="alt-block" id="phoneticAltBlock">
+  <div class="label">Phonetic (alt):</div>
+  <div class="value">
+    <div id="phoneticAlt" class="alt-section hidden"></div>
+    <button class="toggle-btn" onclick="toggleAlt('phoneticAlt', this)">Show more</button>
+  </div>
+</div>
 
       <div class="label">English assist:</div>
       <div class="value" id="english"></div>
 
-      <div class="label">English assist (alt):</div>
-      <div class="value" id="englishAlt"></div>
+      <div class="alt-block" id="englishAltBlock">
+  <div class="label">English assist (alt):</div>
+  <div class="value">
+    <div id="englishAlt" class="alt-section hidden"></div>
+    <button class="toggle-btn" onclick="toggleAlt('englishAlt', this)">Show more</button>
+  </div>
+</div>
 
       <div class="label">Play pronunciation:</div>
       <div class="value"><button onclick="playAudio()">🔊 Listen to word</button></div>
@@ -170,6 +203,20 @@ font-size:109%;}
     <i><p>English assist help: Use the <strong>bolded</strong> part of each English word to match the sound in the Māori word.</p><p>Under development, results are subject to change.</p><p>This word was broken up using the Reo Rite Segmentation Algorithm, learn more about the framework <a href="https://github.com/almokinsgov/ReoRite/wiki/Questions-and-answers#-technical-questions-for-developers-linguists-and-partners">from the Wiki</a></p></i>
         
       </p>
+      <p>
+      <h3 style="color: #0075c4;">Notes & Limitations</h3>
+  <ul style="line-height: 1.6;text-align: left;">
+    <li><strong>TTS model quirks:</strong> Some sounds like <code>/r/</code> or <code>/ɸ/</code> (wh) still rely on near-English stand-ins. These will improve with model-level training and future revisions.</li>
+    <li><strong>Macron support:</strong> Long vowels are included in IPA but not all TTS engines honour macron length. This is under active review.</li>
+    <li><strong>Rolled R:</strong> Where appropriate, a rolled /r/ is suggested in the output and noted with hover cues. This remains hard for TTS engines to synthesize.</li>
+    <li><strong>Audio playback:</strong> Only one pronunciation can be played at a time to avoid overlap.</li>
+    <li><strong>Regional variants:</strong> The system currently reflects standard Māori. Dialectal toggles are planned once corpus data becomes available.</li>
+    <li><strong>Complex phrases:</strong> The system is being extended to handle phrase-level pronunciation (preview in the comparison page).</li>     
+    <li><strong>Custom words:</strong> The current demo uses preset examples. Soon, you’ll be able to enter any Māori word to get real-time pronunciation support.</li>
+      <li><strong>Have feedback or want to support the kaupapa?</strong> <a href="https://forms.gle/8BLGX1gi6eQzUNbW6" target="_blank">Let us know here</a>.</li>
+
+    </ul></p>
+  <p style="font-size: 0.9rem; color: #666;">Last updated: May 2025</p>
   </div>
 </section>
 
@@ -188,7 +235,7 @@ font-size:109%;}
         audio: "https://reorite.nz/audio/tokerau.mp3",
         ssml: "<speak>tɔːkɛdəʊ</speak>"
       },
-      "Ohaeawai": {
+      "Ōhaeawai": {
         segmented: "O + hae + a + wai",
         phonetic: "Aw + high + ah + why",
         phoneticAlt: "or + hi + ah + why",
@@ -226,12 +273,22 @@ font-size:109%;}
         ssml: "<speak>hɔː.ɾ͡dɔ̞ː.fɛ.nʊːɑh</speak>"
       }
     };
+    
+    function toggleAlt(id, btn) {
+  const section = document.getElementById(id);
+  const isHidden = section.classList.toggle("hidden");
+  btn.textContent = isHidden ? "Show more" : "Show less";
+}
+
+
 
     const select = document.getElementById("wordSelect");
     const info = document.getElementById("wordInfo");
 
     select.addEventListener("change", () => {
       const word = select.value;
+      
+
 
     // ✅ Track dropdown selection
     gtag('event', 'word_selected', {
@@ -256,13 +313,46 @@ font-size:109%;}
       document.getElementById("englishAlt").innerHTML = wordData.englishAlt || "";
       document.getElementById("ssml").innerHTML = wordData.ssml;
       window.currentAudio = wordData.audio;
-
+// Reset all alt blocks
+['phoneticAlt', 'englishAlt'].forEach(id => {
+  const section = document.getElementById(id);
+  const button = section?.nextElementSibling;
+  if (section && button) {
+    section.classList.add('hidden');
+    button.innerText = "Show more";
+  }
+});
+      
       info.style.display = "block";
+      
+       // Set phonetic alt
+const phoneticAltVal = wordData.phoneticAlt || "";
+document.getElementById("phoneticAlt").innerHTML = phoneticAltVal;
+document.getElementById("phoneticAltBlock").classList.toggle("hidden-block", phoneticAltVal.trim() === "");
+
+// Set English alt
+const englishAltVal = wordData.englishAlt || "";
+document.getElementById("englishAlt").innerHTML = englishAltVal;
+document.getElementById("englishAltBlock").classList.toggle("hidden-block", englishAltVal.trim() === "");
+
+
+      
     });
 
-    function playAudio() {
+   let activeAudio = null;
+
+function playAudio() {
+  // Stop current audio if already playing
+  if (activeAudio && !activeAudio.paused) {
+    activeAudio.pause();
+    activeAudio.currentTime = 0;
+  }
+
+  // Create and play new audio
   if (window.currentAudio) {
-    new Audio(window.currentAudio).play();
+    const audio = new Audio(window.currentAudio);
+    activeAudio = audio;
+    audio.play();
 
     // Google Analytics event tracking
     const selectedWord = document.getElementById("wordHeader").innerText;
