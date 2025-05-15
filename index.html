@@ -355,10 +355,8 @@ function playAudio() {
     // Google Analytics event tracking
     const selectedWord = document.getElementById("wordHeader").innerText;
     gtag('event', 'audio_play', {
-      event_category: 'Demo Interaction',
-      event_label: selectedWord,
-      value: 1
-    });
+  audio_play: selectedWord
+});
   }
 }
   </script>  
