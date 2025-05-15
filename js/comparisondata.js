@@ -172,7 +172,25 @@ const comparisonData = [
       listContainer.appendChild(block);
     });
 
-    function playAudio(file) {
-      const audio = new Audio(file);
-      audio.play();
-    }
+    let currentAudio = null;
+
+function playAudio(file) {
+  // If there's an audio currently playing, pause it
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+
+  // Create a new audio instance and play it
+  currentAudio = new Audio(file);
+  currentAudio.play();
+
+  // Google Analytics event tracking
+  const label = file.includes("without") ? "Without Reo Rite" : "With Reo Rite";
+  const word = file.split("/").pop().replace(/_(with|without)\.mp3/, "");
+
+  gtag('event', 'audio_playback', {
+    event_category: 'Comparison Demo',
+    event_label: `${word} – ${label}`
+  });
+}
