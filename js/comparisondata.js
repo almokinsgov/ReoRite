@@ -80,8 +80,8 @@ const comparisonData = [
         notes: "Wh-sound stabilisation applied.<br><b>Accuracy rating before correction:</b> 48%<br><b>Accuracy rating after correction:</b> 97%"
       },
       {
-        word: "Ohaeawai",
-        segmented: "O + hae + a + wai",
+        word: "Ōhaeawai",
+        segmented: "Ō + hae + a + wai",
         ipa: "/ ɔː.hɑɛ.ɑh.wɑiː /",
         without: "audio/ohaeawai_without.mp3",
         with: "audio/ohaeawai_with.mp3",
